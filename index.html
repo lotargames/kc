@@ -3,10 +3,13 @@
   <head>
 <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 <script type="text/javascript">
-  vkBridge.send('VKWebAppInit');
-  vkbridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
+  bridge.send('VKWebAppInit');
+  bridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
 .then(data => console.log(data.result))
 .catch(error => console.log(error));
+  bridge.send("VKWebAppShowInviteBox", {})
+         .then(data => console.log(data.success))  
+        .catch(error => console.log(error));
 </script>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
