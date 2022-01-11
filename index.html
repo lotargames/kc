@@ -3,10 +3,8 @@
   <head>
 <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 <script type="text/javascript">
-  //ADS
-  import bridge from '@vkontakte/vk-bridge';
-  bridge.send("VKWebAppInit", {});
-  bridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
+  vkBridge.send('VKWebAppInit');
+  VKbridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
 .then(data => console.log(data.result))
 .catch(error => console.log(error));
 </script>
