@@ -4,7 +4,7 @@
 <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 <script type="text/javascript">
   vkBridge.send('VKWebAppInit');
-  VKbridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
+  vkbridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
 .then(data => console.log(data.result))
 .catch(error => console.log(error));
 </script>
