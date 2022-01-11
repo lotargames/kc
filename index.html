@@ -24,7 +24,13 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
+        <div id="unity-webgl-logo">
+          <!-- Put this div tag to the place, where the Comments block will be -->
+<div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+</script>
+        </div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title"></div>
       </div>
@@ -123,10 +129,5 @@
       };
       document.body.appendChild(script);
     </script>
-    <!-- Put this div tag to the place, where the Comments block will be -->
-<div id="vk_comments"></div>
-<script type="text/javascript">
-VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
-</script>
   </body>
 </html>
