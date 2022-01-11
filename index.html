@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <script type="text/javascript">
+      function Join(){
+        vkBridge.send("VKWebAppShowInviteBox", {})
+         .then(data => console.log(data.success))  
+        .catch(error => console.log(error));
+      }
+    </script>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
@@ -26,11 +33,7 @@
       <div id="unity-warning"> </div>
       <div id="unity-footer">
         <div id="unity-webgl-logo">
-          <button class="button" onclick="<script type="text/javascript">
-  vkBridge.send("VKWebAppShowInviteBox", {})
-         .then(data => console.log(data.success))  
-        .catch(error => console.log(error));
-</script>">Пригласить</button>
+          <button class="button" onclick="Join()">Пригласить</button>
         </div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title"></div>
