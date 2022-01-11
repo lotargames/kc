@@ -6,8 +6,9 @@
 
 <script type="text/javascript">
   VK.init({apiId: 8042103, onlyWidgets: true});
+  //ADS
   bridge.send("VKWebAppInit");
-  bridge.send("VKWebAppShowNativeAds", {ad_format:"preloader"})
+  bridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
 .then(data => console.log(data.result))
 .catch(error => console.log(error));
 </script>
